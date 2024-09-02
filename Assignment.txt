@@ -6,4 +6,10 @@ soo all assignment is doing by sultan(Balinder).
 
 S/n     Level       Assignment title
 1       Low         Find the length of string.
+2       Low         Take a object and enter value of product in json formated and then Serach
+                    the price of product by  this name or category.
+3       medium      In This assignment we work the string and rearrange the letter in different
+                    order and make a another word.
+4       medium      palindrome.
+5       medium      uploading file and then display file conten.
  
