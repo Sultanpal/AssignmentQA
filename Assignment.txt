@@ -12,4 +12,5 @@ S/n     Level       Assignment title
                     order and make a another word.
 4       medium      palindrome.
 5       medium      uploading file and then display file conten.
+6       medium      Convert an array of numbers into a new array with every element Multiplied by 2.
  
