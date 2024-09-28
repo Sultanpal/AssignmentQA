@@ -12,7 +12,7 @@ const readline = require('readline');
 
 function readme() {
     return new Promise((resolve, reject) => {
-        fs.readFile("Assignment.txt", 'utf-8', (err, data) => {
+        fs.readFile("todo.txt", 'utf-8', (err, data) => {
             if (err) {
                 reject(err);
             } else {
@@ -24,9 +24,9 @@ function readme() {
 //Now write the content in the existing file.
 function writeToFile(data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile("Assignment.txt", data, 'utf-8', (err) => {
+        fs.writeFile("todo.txt", data, 'utf-8', (err) => {
             if (err) {
-                reject("file is not working correctilly");
+                reject(err);
             } else {
                 resolve("File updated successfully!");
             }
@@ -48,7 +48,7 @@ function onData(data){
         rl.close();
 
         writeToFile(updatedData)
-            .then(message => console.logT(message))
+            .then(message => console.log(message))
             .catch(err => console.error("Error writing to file:", err));
     });
 }
