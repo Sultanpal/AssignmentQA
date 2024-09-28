@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Two Numbers</title>
+</head>
+<body>
+    <script>
+        async function sum() {
+            const a = document.getElementById('fnumber').value;
+            const b = document.getElementById('snumber').value;
+
+            // Corrected the query string format
+            const response = await fetch(`http://localhost:200/sum?a=${a}&b=${b}`);
+            const result = await response.text(); // Ensure to await response.text()
+            document.getElementById("putData").innerHTML = result;
+        }
+    </script>
+
+    <input type="text" onchange="sum()" placeholder="First Number" id="fnumber">
+    <input type="text" onchange="sum()" placeholder="Second Number" id="snumber">
+    <div id="putData"></div>
+</body>
+</html>
